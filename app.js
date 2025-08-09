@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
-const usersRouter = require("./routes/usersRouter");
+const dotenv = require('dotenv').config()
+const bodyParser = require("body-parser");
+const postRouter = require("./routes/postRouter");
 
-app.set("view engine", "ejs");
+app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }));
-app.use("/", usersRouter);
+app.use('/', postRouter)
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Express app listening on port ${PORT}!`));
