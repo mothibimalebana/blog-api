@@ -20,6 +20,8 @@
   "homepage": "https://github.com/mothibimalebana/express-template#readme",
   "dependencies": {
     "express": "^5.1.0",
-    "express-validator": "^7.2.1"
+    "express-validator": "^7.2.1",
+    "pg": "^8.16.3",
+    "uuid": "^11.1.0"
   }
 }
